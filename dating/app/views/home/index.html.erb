@@ -13,19 +13,18 @@
 
 	jQuery(function($) {
 
-		$.supersized{
+		$.supersized({
 			slide_interval : 4000,
 			transition     : 1,
 			transition_speed: 700,
 			slinde_links   :'blank',
 
-			slides     : [
-
-				{image : 'assets/bg.jpg'},
-				{image : 'assets/bg2.jpg'},
-				{image : 'assets/bg3.jpg'}
-
-			]
+			slides           : [
+			
+			{image : '<%= image_url("bg.jpg") %>'},
+			{image : '<%= image_url("bg2.jpg") %>'},
+			{image : '<%= image_url("bg3.jpg") %>'}
+		]
 
 		});
 
