@@ -8,6 +8,15 @@ Bundler.require(*Rails.groups)
 
 module Dating
   class Application < Rails::Application
+
+      config.paperclip_defaults = {
+      :storage => :s3,
+      :s3_credentials => { 
+         :bucket => "cooldating", #ENV['AWS_BUCKET'],
+         :access_key_id => "AKIAJ5NFL3UPFH3JKTCQ", #ENV['AWS_ACCESS_KEY_ID'],
+         :secret_access_key => "FG/B+/zZRTB1aU7TpF2fF+cJpU/Rdzz8k0nAO3LNENV"#['AWS_SECRET_ACCESS_KEY']
+      }
+    }
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
